@@ -183,22 +183,6 @@ int main()
     // This is how you save the neural network to disk.
     // xtsave(tinn, "saved.tinn");
     xtfree(tinn);
-    // This is how you load the neural network from disk.
-     Tinn loaded = xtload("saved.tinn");
-    // Now we do a prediction with the neural network we loaded from disk.
-    // Ideally, we would also load a testing set to make the prediction with,
-    // but for the sake of brevity here we just reuse the training set from earlier.
-    // One data set is picked at random (zero index of input and target arrays is enough
-    // as they were both shuffled earlier).
-     float*  in = data.in[0];
-     float*  tg = data.tg[0];
-     float*  pd = xtpredict(loaded, in);
-    // Prints target.
-    xtprint(tg, data.nops);
-    // Prints prediction.
-    xtprint(pd, data.nops);
-    // All done. Let's clean up.
-    xtfree(loaded);
     dfree(data);
     return 0;
 }
