@@ -1,11 +1,11 @@
-#tinn_mnist
+# tinn_mnist
 
-1. python2 convert.py > mnist.txt   or  tar zxvf mnist.txt.tgz
+python2 convert.py > mnist.txt   or  tar zxvf mnist.txt.tgz
 
-2. make
+make
 
-3. ./train
+./train
 
-4. ./predict
+./predict
 
 
